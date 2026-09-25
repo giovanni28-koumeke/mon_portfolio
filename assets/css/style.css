@@ -175,3 +175,21 @@ nav a.active::after {
     gap: 20px;
     margin-top: 20px;
 }
+
+/* 1. Style de la section Contact (Centrage et espacements) */
+#contact {
+    display: flex;
+    flex-direction: column;  /* Empile le titre, le texte et le bouton verticalement */
+    align-items: center;     /* Centre tous les enfants horizontalement */
+    text-align: center;      /* Centre le texte multi-lignes */
+    gap: 20px;               /* Crée un espace régulier de 20px entre chaque élément (h2, p, bouton) */
+}
+
+/* 2. Style du Footer */
+footer {
+    padding: 40px 20px;      /* Espacement interne haut/bas et gauche/droite */
+    text-align: center;      /* Centre le texte du copyright */
+    color: #94a3b8;          /* Gris-bleu discret pour ne pas voler la vedette au contenu */
+    font-size: 0.9rem;       /* Taille de texte légèrement réduite */
+    border-top: 1px solid #1e293b; /* Séparation discrète avec la section du dessus */
+}
