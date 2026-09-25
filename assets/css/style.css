@@ -149,3 +149,29 @@ nav a.active::after {
 .progress-bar.MySQL {
     width: 70%;
 }
+
+/* Style de base de la carte */
+.card {
+    background-color: #1e293b;  /* Fond plus clair que le body pour détacher la carte */
+    padding: 25px;              /* Espacement interne pour que le texte respire */
+    border-radius: 8px;         /* Arrondi cohérent avec .progress et .btn */
+    border: 1px solid #334155;  /* Bordure subtile pour marquer les contours */
+    margin-top: 20px;
+    
+    /* Préparation de l'animation au survol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effet interactif au survol de la carte */
+.card:hover {
+    transform: translateY(-5px); /* Légère élévation de la carte */
+    border-color: #f1c40f;      /* Rappel de la couleur d'accentuation dorée */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Ombre portée sous la carte */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
