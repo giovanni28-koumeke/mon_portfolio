@@ -197,8 +197,9 @@ nav a.active::after {
 /* Effet interactif au survol de la carte */
 .card:hover {
     transform: translateY(-5px); /* Légère élévation de la carte */
-    border-color: #f1c40f;      /* Rappel de la couleur d'accentuation dorée */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Ombre portée sous la carte */
+    border: 1px solid #f1c40f ;
+    box-shadow: 0 10px 20px #00000066; /* Ombre portée sous la carte */
+    transition: transform 0.3s ease, border-color 1s ease, box-shadow 1s ease;
 }
 
 .card-date {
@@ -258,11 +259,12 @@ nav a.active::after {
 
 /* 2. Style du Footer */
 footer {
-    padding: 40px 20px;      /* Espacement interne haut/bas et gauche/droite */
-    text-align: center;      /* Centre le texte du copyright */
-    color: #94a3b8;          /* Gris-bleu discret pour ne pas voler la vedette au contenu */
-    font-size: 0.9rem;       /* Taille de texte légèrement réduite */
-    border-top: 1px solid #1e293b; /* Séparation discrète avec la section du dessus */
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 0.85rem;
+    text-align: left;
 }
 
 /* Conteneur de la section */
