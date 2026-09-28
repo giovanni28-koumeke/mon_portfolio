@@ -15,31 +15,59 @@ body {
     color: #f1f5f9;
 }
 
-/* Header fixe */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    background: rgba(15, 23, 42, 0.8);
-    padding: 15px 50px;
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* 320px pour la sidebar fixe, le reste pour le contenu */
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: 0 auto;
 }
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Toute la hauteur de l'écran */
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espace équitable entre photo, nav et réseaux */
+  border-right: 1px solid #1e293b;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* Image ronde */
+  object-fit: cover;
+  border: 3px solid #f1c40f; /* Contour doré */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.profile-title {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.2rem;
 }
 
 nav ul {
     display: flex;
+    flex-direction: column;
     list-style: none;
     gap: 20px;
 }
@@ -56,11 +84,33 @@ nav a {
 /* Changement de couleur au survol */
 nav a:hover {
     color: #f1c40f;
+    padding-left: 8px;
 }
 
 /* Style du lien actif */
 nav a.active {
     color: #f1c40f;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #94a3b8;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f1c40f;
+  transform: translateY(-3px);
+}
+
+.main-content {
+  padding: 50px 60px;
 }
 
 /* Barre de soulignement pour le lien actif */
@@ -83,32 +133,11 @@ nav a.active::after {
 }
 
 /* Adjustement des sections pour compenser la hauteur du header fixe */
-.hero, .section {
+.section {
     padding: 120px 50px 80px 50px;
     min-height: 100vh;
 }
 
-.hero-content {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.btn {
-    background-color: #f1c40f;
-    color: #0f172a;
-    font-weight: bold;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    width: fit-content;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #d4ac0d;
-}
 
 /* 1. Le conteneur de la barre (La barre "vide") */
 .progress {
@@ -152,10 +181,13 @@ nav a.active::after {
 
 /* Style de base de la carte */
 .card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
     background-color: #1e293b;  /* Fond plus clair que le body pour détacher la carte */
     padding: 25px;              /* Espacement interne pour que le texte respire */
     border-radius: 8px;         /* Arrondi cohérent avec .progress et .btn */
-    border: 1px solid #334155;  /* Bordure subtile pour marquer les contours */
+    /*border: 1px solid #334155;   Bordure subtile pour marquer les contours */
     margin-top: 20px;
     
     /* Préparation de l'animation au survol */
@@ -169,11 +201,50 @@ nav a.active::after {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Ombre portée sous la carte */
 }
 
+.card-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b; /* Gris-bleu discret */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 4px; /* Alignement visuel avec le haut du titre */
+}
+
+.card-title a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-title a {
+  color: #f1c40f; /* Votre couleur dorée */
+}
+
+.card:hover .arrow {
+  transform: translate(2px, -2px); /* La petite flèche bouge légèrement */
+  transition: transform 0.2s ease;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 20px;
+}
+
+.project-description {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.card p{
+    color: #94a3b8;
 }
 
 /* 1. Style de la section Contact (Centrage et espacements) */
@@ -192,4 +263,65 @@ footer {
     color: #94a3b8;          /* Gris-bleu discret pour ne pas voler la vedette au contenu */
     font-size: 0.9rem;       /* Taille de texte légèrement réduite */
     border-top: 1px solid #1e293b; /* Séparation discrète avec la section du dessus */
+}
+
+/* Conteneur de la section */
+.about-section {
+    max-width: 800px; /* Limite la largeur des lignes pour un confort de lecture optimal */
+    margin: 0 auto;   /* Centre la section si elle est isolée */
+}
+
+/* Espacement et hauteur de ligne pour le texte */
+.about-section p {
+    color: #cbd5e1;       /* Gris-bleu clair plus doux pour les yeux que le blanc pur */
+    line-height: 1.7;     /* Aère le texte entre chaque ligne */
+    margin-bottom: 1.2rem;/* Espace entre les paragraphes */
+    font-size: 1.05rem;
+}
+
+/* Mettre en valeur la première phrase d'accroche */
+.about-lead {
+    font-size: 1.2rem;
+    color: #f1f5f9;
+}
+
+/* Style des mots importants en gras */
+.about-section strong {
+    color: #ffffff; /* Le blanc fait ressortir les mots-clés */
+}
+
+/* Carte / Encadré pour l'objectif */
+.about-highlight {
+    background-color: #1e293b;
+    border-left: 4px solid #f1c40f; /* Rappel de la couleur d'accent dorée */
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 25px;
+    color: #f1f5f9;
+}
+
+/* --- ADAPTATION MOBILE / TABLETTE (Responsive) --- */
+@media (max-width: 900px) {
+  .portfolio-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #1e293b;
+    padding: 40px 20px;
+  }
+
+  .main-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: 1fr; /* Sur mobile, la date passe au-dessus du titre */
+    gap: 8px;
+  }
 }

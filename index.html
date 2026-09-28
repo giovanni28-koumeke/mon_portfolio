@@ -5,98 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni KOUMEKE - portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Google font moderne -->
 
+    <!-- Google font moderne -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+    <!-- Icônes (Optionnel : FontAwesome ou Lucide icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <h1 class="logo">Giovanni</h1>
-            <ul class="nav-links">
-                <li><a href="#about">A propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Etudiant en Génie Logiciel</h2>
-            <p>Développeur web & Logiciel passionné</p>
-            <a href="#projets" class="btn">voir mes projets</a>
-        </div>
-    </section>
-        
-    <section id="about" class="section">
-        <h2> A propos</h2>
-        <p> Je suis étudiant en génie logiciel passionné par le dévoloppement web, les base de données et les systèmes logiciels.</p>
-    </section>
+    <div class="portfolio-container">
+        <aside class="sidebar">
 
-    <section id="skills" class="section">
-        <h2>Compétances</h2>
-
-        <div class="skill">
-            <p>HTML / CSS</p>
-            <div class="progress"><div class="progress-bar html"></div></div>
-        </div>
-
-        <div class="skill">
-            <p>javaScript</p>
-            <div class="progress"><div class="progress-bar js"></div> </div>
-        </div>
-
-        <div class="skill">
-            <p>PHP</p>
-            <div class="progress"><div class="progress-bar php"></div></div>
-        </div>
-
-        <div class="skill">
-            <p>MySQL</p>
-            <div class="progress"><div class="progress-bar MySQL"></div></div>
-        </div>
-        <!--<ul>
-            <li>HTML / CSS</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>Java</li>
-            <li>MySQL</li>
-        </ul>-->
-    </section>
-
-    <section id="projets" class="section" class="projects-grid">
-        <h2>Projets</h2>
-        <div class="projet-container">
-            <div class="card">
-                <h3>Agri TG</h3>
-                <p>Système de gouvernance pour coopératives agricoles togolaises, basé sur un contrat intelligent (blockchain) et un tableau de bord complet.</p>
+            <div class="profile-header">
+                <img src="ma-photo.png" alt="Photo de KOUMEKE Simon" class="profile-img">
+                <h1 class="profile-name">KOUMEKE Giovanni</h1>
+                <p class="profile-title">Software Engineer</p>
             </div>
 
-            <div class="card">
-                <h3>Gestionnaire de Contacts</h3>
-                <p>Application développée en Java permettant de gérer des contacts. Le projet met en pratique les principes fondamentaux de la programmation orientée objet ainsi que la manipulation et l’organisation des données.</p>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
+        </aside>
 
-            <div class="card">
-                <h3>Jeu de Démineur</h3>
-                <p>Jeu informatique inspiré du célèbre jeu Démineur. Le projet permet de mettre en pratique la logique algorithmique, les structures de données et la gestion des interactions nécessaires au fonctionnement d’un jeu.</p>
-            </div>
+        <main class="main-content">
 
-            <div class="card">
-                <h3>Application de gestion des groupes et utilisateurs</h3>
-                <p>Application desktop développée avec Java Swing, JPA et PostgreSQL. Elle permet de gérer des utilisateurs et leurs groupes à travers une architecture organisée autour des entités, de la couche d’accès aux données et des services.</p>
-            </div>
-        </div>
-    </section>
+                
+            <section id="about" class="section about-section">
+                <!--<h2> À propos</h2> -->
+                <p class="about-lead">
+                    Je suis un futur <strong>Software Engineer</strong> passionné par la conception et le développement de solutions numériques utiles, performantes et évolutives.
+                </p>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <a href="mailto:giovanniKoumeke3@gmail.com" class="btn">Me contacter</a>
-    </section>
+                <p>
+                    Mon parcours me permet d'explorer différents domaines du développement logiciel, notamment le <strong>développement web</strong>, la <strong>programmation</strong>, les <strong>bases de données</strong> et les <strong>technologies émergentes</strong>. À travers mes projets, hackathons et travaux en équipe, je cherche constamment à transformer des idées en solutions concrètes.
+                </p>
 
+                <p>
+                    Je considère chaque projet comme une opportunité d'apprendre, d'améliorer mes compétences et de développer une approche plus rigoureuse de l'ingénierie logicielle.
+                </p>
+
+                <!-- Carte d'objectif pour mettre en valeur votre vision -->
+                <div class="about-highlight">
+                    <span> <strong>Mon objectif :</strong> devenir un Software Engineer capable de concevoir des applications fiables, maintenables et adaptées aux besoins réels des utilisateurs.</span>
+                </div>    
+            </section>
+
+            <section id="skills" class="section">
+                <!--<h2>Compétances</h2>-->
+
+                <div class="skill">
+                    <p>HTML / CSS</p>
+                    <div class="progress"><div class="progress-bar html"></div></div>
+                </div>
+
+                <div class="skill">
+                    <p>javaScript</p>
+                    <div class="progress"><div class="progress-bar js"></div> </div>
+                </div>
+
+                <div class="skill">
+                    <p>PHP</p>
+                    <div class="progress"><div class="progress-bar php"></div></div>
+                </div>
+
+                <div class="skill">
+                    <p>MySQL</p>
+                    <div class="progress"><div class="progress-bar MySQL"></div></div>
+                </div>
+                
+            </section>
+
+            <section id="projets" class="section projects-grid">
+                <!--<h2>Projets</h2>-->
+                <div class="projet-container">
+
+                    <div class="card">
+                        <header card-date>
+                            Avr. 2026 – Mai 2026
+                        </header>
+
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <a href="#" target="_blank">
+                                    Agri TG <span class="arrow">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">Système de gouvernance pour coopératives agricoles togolaises, basé sur un contrat intelligent (blockchain) et un tableau de bord complet.</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="card">
+                        <header card-date>
+                            Févr. 2026 – Mars 2026
+                        </header>
+
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <a href="#" target="_blank">
+                                    Gestionnaire de Contacts <span class="arrow">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">Application développée en Java permettant de gérer des contacts. Le projet met en pratique les principes fondamentaux de la programmation orientée objet ainsi que la manipulation et l’organisation des données.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <header card-date>
+                            Juin 2026 - Juil. 2026
+                        </header>
+
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <a href="#" target="_blank">
+                                    Jeu de Démineur <span class="arrow">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">Jeu informatique inspiré du célèbre jeu Démineur. Le projet permet de mettre en pratique la logique algorithmique, les structures de données et la gestion des interactions nécessaires au fonctionnement d’un jeu.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <header card-date>
+                            juillet 2026
+                        </header>
+
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <a href="#" target="_blank">
+                                    Application de gestion des groupes et utilisateurs <span class="arrow">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">Application desktop développée avec Java Swing, JPA et PostgreSQL. Elle permet de gérer des utilisateurs et leurs groupes à travers une architecture organisée autour des entités, de la couche d’accès aux données et des services.</p>
+                        </div>    
+                    </div>
+
+                    <div class="card">
+                        <header card-date>
+                            septembre 2026
+                        </header>
+
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <a href="#" target="_blank">
+                                    CentralIA: Un inbox unique et intelligent pour ne plus jamais perdre un client <span class="arrow">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">CentralIA est une solution qui centralise dans un inbox unique les messages clients reçus sur WhatsApp, Facebook et Instagram — un vrai casse-tête pour les PME togolaises, qui jonglent entre plusieurs canaux et perdent des ventes faute de suivi. L'IA (Gemini 2.0 Flash) classe et priorise automatiquement les demandes selon l'urgence et l'intention d'achat, transcrit les notes vocales, et suggère des réponses que le commerçant valide avant envoi. Le suivi va jusqu'à la conversion, avec génération de liens de paiement Mobile Money (Flooz / Moov Money). Le principe directeur : l'IA propose, le commerçant décide.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <footer>
         <p>© 2026 Giovanni KOUMEKE - Tous droits réservés</p>
     </footer>
